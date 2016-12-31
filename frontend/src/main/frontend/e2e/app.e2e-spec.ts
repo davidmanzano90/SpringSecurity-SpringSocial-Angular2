@@ -1,10 +1,10 @@
-import { SecurityPage } from './app.po';
+import { Ng2AdminLtePage } from './app.po';
 
-describe('security App', function() {
-  let page: SecurityPage;
+describe('ng2-admin-lte App', function() {
+  let page: Ng2AdminLtePage;
 
   beforeEach(() => {
-    page = new SecurityPage();
+    page = new Ng2AdminLtePage();
   });
 
   it('should display message saying app works', () => {
