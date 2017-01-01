@@ -1,0 +1,44 @@
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+    <app-header>{{ 'LOADING' | translate }} header...</app-header>
+
+    <app-menu-aside>{{ 'LOADING' | translate }} menu...</app-menu-aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <toaster-container [toasterconfig]="toastrConfig"></toaster-container>
+        <app-breadcrumb></app-breadcrumb>
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="box box-default">
+                <div class="box-body">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-footer>{{ 'LOADING' | translate }} footer...</app-footer>
+    <div class="loading">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+        <h1>Awesome app launching...</h1>
+    </div>
+
+</div>
+
+</body>
+

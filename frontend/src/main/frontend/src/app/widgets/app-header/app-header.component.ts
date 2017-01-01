@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
-import { TranslateService } from 'ng2-translate';
-import { AuthService } from '../../services/auth.service';
+import {Component} from '@angular/core';
+import {ModalDirective} from "ng2-bootstrap";
+import {ViewChild} from "@angular/core/src/metadata/di";
+import {AuthService} from "../../services/auth.service";
 
 @Component( {
     selector: 'app-header',

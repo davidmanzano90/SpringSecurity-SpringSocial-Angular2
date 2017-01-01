@@ -1,28 +1,21 @@
-import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CanActivateGuard } from './services/guard.service';
-
-// Components
-import { HomeComponent } from './pages/home/home.component';
-import { PageNumComponent } from './pages/page-num/page-num.component';
-import { ClientComponent } from './pages/client/client.component';
+import {NgModule} from "@angular/core/src/metadata/ng_module";
+import {LandingPageComponent} from "./landing-page/landing-page.component";
 
 const routes: Routes = [
-  // Root
+  { path: '', component: LandingPageComponent },
   {
-    component: HomeComponent,
-    path: ''
-  },
-  {
-    canActivate: [CanActivateGuard],
-    component: PageNumComponent,
-    path: 'page/:id'
-  },
-  {
-    canActivate: [CanActivateGuard],
-    component: ClientComponent,
-    path: 'client'
+    path: 'login',
+    loadChildren: "./auth/auth.module#AuthModule"
   }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
+})
+export class AppRoutes { }
